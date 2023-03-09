@@ -112,9 +112,12 @@ public class CountryController {
         EntityManager em = entityManagerFactory.createEntityManager();
         em.getTransaction().begin();
         Country country = (Country) em.find(Country.class, countryId);
-        em.remove(country);
-        em.getTransaction().commit();
-        em.close();
+        if(country != null){
+            em.remove(country);
+            em.getTransaction().commit();
+            em.close();
+        }
+        else System.out.println("No existeix ID introduït");
     }
 
 }

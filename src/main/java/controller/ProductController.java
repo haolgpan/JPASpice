@@ -110,9 +110,12 @@ public class ProductController {
         EntityManager em = entityManagerFactory.createEntityManager();
         em.getTransaction().begin();
         Product product = (Product) em.find(Product.class, productId);
-        em.remove(product);
-        em.getTransaction().commit();
-        em.close();
+        if(product != null){
+            em.remove(product);
+            em.getTransaction().commit();
+            em.close();
+        }
+        else System.out.println("No existeix ID introduït");
     }
 }
 

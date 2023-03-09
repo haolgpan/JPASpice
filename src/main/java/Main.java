@@ -190,7 +190,7 @@ public class Main {
                         spiceController.listSpices();
                         break;
                     }catch (Exception e){
-                        System.out.println("No existeix el ID seleccionat");
+                        e.printStackTrace();
                     }
                 case 7:
                     spiceController.listSpices();
@@ -274,6 +274,28 @@ public class Main {
                         break;
                     }catch (Exception e){
                         e.printStackTrace();
+                    }
+                case 14:
+                    countryController.listCountries();
+                    System.out.println("Introdueix Id del país a esborrar: ");
+                    id = scanner.nextInt();
+                    try {
+                        countryController.deleteCountry(id);
+                        countryController.listCountries();
+                        break;
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+                case 15:
+                    productController.listProducts();
+                    id = scanner.nextInt();
+                    try {
+                        productController.deleteProduct(id);
+                        System.out.println("Esborrat el format amb ID: " + id);
+                        productController.listProducts();
+                        break;
+                    }catch (Exception e){
+                        System.out.println("No existeix el ID seleccionat");
                     }
                 default:
 //                    System.out.println("No existeix la opció escollida.");

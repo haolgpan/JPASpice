@@ -130,13 +130,15 @@ public class SpiceController {
 
     /* Method to DELETE an Article from the records */
     public void deleteSpice(Integer spiceId) {
-
         EntityManager em = entityManagerFactory.createEntityManager();
         em.getTransaction().begin();
         Spice spice = (Spice) em.find(Spice.class, spiceId);
-        em.remove(spice);
-        em.getTransaction().commit();
-        em.close();
+        if(spice != null){
+            em.remove(spice);
+            em.getTransaction().commit();
+            em.close();
+        }
+        else System.out.println("No existeix ID introduït");
     }
 
     public void infoSpice() {

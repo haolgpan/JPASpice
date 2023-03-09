@@ -37,6 +37,8 @@ public class Menu {
             System.out.println("11. Mostra totes els productes.");
             System.out.println("12. Modificar el nom d'un paìs per id");
             System.out.println("13. Modificar el format d'un producte per id");
+            System.out.println("14. Eliminar per ID un país");
+            System.out.println("15. Eliminar per ID un format");
             System.out.println("0. Sortir. ");
 
             System.out.println("Esculli opció: ");
@@ -46,7 +48,7 @@ public class Menu {
                 System.out.println("valor no vàlid");
                 e.printStackTrace();
             }
-        } while (option < 0 && option > 13);
+        } while (option < 0 && option > 15);
 
         return option;
     }

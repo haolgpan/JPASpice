@@ -4,19 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a506f3c-f47a-4616-93de-b492d20c70ee" name="Changes" comment="Commit">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="8a506f3c-f47a-4616-93de-b492d20c70ee" name="Changes" comment="Java Doc">
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/CountryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/CountryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/SpiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/SpiceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TableController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Country.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Spice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Spice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +85,35 @@
       <option name="project" value="LOCAL" />
       <updated>1678383497817</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Java Doc">
+      <created>1678388095180</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678388095180</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Java Doc">
+      <created>1678388105124</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678388105124</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Java Doc">
+      <created>1678388111229</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1678388111229</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Java Doc">
+      <created>1678388113135</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678388113135</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -108,6 +129,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit" />
+    <MESSAGE value="Java Doc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Java Doc" />
   </component>
 </project>
