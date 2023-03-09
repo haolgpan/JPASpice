@@ -137,6 +137,7 @@ public class SpiceController {
             em.remove(spice);
             em.getTransaction().commit();
             em.close();
+            System.out.println("Esborrat la espècia amb ID: " + spiceId);
         }
         else System.out.println("No existeix ID introduït");
     }

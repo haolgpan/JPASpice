@@ -5,69 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a506f3c-f47a-4616-93de-b492d20c70ee" name="Changes" comment="Java Doc">
-      <change afterPath="$PROJECT_DIR$/docs/Main.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/allclasses-index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/allpackages-index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/controller/CountryController.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/controller/ProductController.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/controller/SpiceController.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/controller/TableController.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/controller/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/controller/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/copy.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/database/ConnectionFactory.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/database/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/database/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/element-list" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/help-doc.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-10.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-11.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-12.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-13.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-6.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-7.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-8.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-9.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/jquery-ui.overrides.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/legal/ADDITIONAL_LICENSE_INFO" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/legal/ASSEMBLY_EXCEPTION" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/legal/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/legal/jquery.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/legal/jqueryUI.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/member-search-index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/model/Country.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/model/Product.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/model/Spice.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/model/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/model/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/module-search-index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/overview-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/overview-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/package-search-index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/resources/glass.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/resources/x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/script-dir/jquery-3.6.0.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/script-dir/jquery-ui.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/script-dir/jquery-ui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/search-page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/search.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/serialized-form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/stylesheet.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/tag-search-index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/type-search-index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/view/Menu.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/view/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/view/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/CountryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/CountryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/SpiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/SpiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/Menu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +124,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678388830743</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Java Doc">
+      <created>1678388917481</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1678388917481</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Java Doc">
+      <created>1678388924773</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1678388924773</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

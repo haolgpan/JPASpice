@@ -58,7 +58,7 @@ public class ProductController {
         return productList;
     }
 
-    public void printProduct(ArrayList<Product> productsList) {
+    public void printProduct(List<Product> productsList) {
         for (int i = 0; i < productsList.size(); i++) {
             System.out.println(productsList.get(i).toString());
         }
@@ -89,7 +89,7 @@ public class ProductController {
         em.close();
     }
 
-    /* Method to UPDATE activity for a Product */
+    /* Method to UPDATE format for a Product */
     public void updateProduct(Integer productId, String format) {
         EntityManager em = entityManagerFactory.createEntityManager();
         em.getTransaction().begin();
@@ -114,6 +114,8 @@ public class ProductController {
             em.remove(product);
             em.getTransaction().commit();
             em.close();
+            System.out.println("Esborrat el format amb ID: " + productId);
+
         }
         else System.out.println("No existeix ID introduït");
     }

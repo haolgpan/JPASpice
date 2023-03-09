@@ -35,10 +35,10 @@ public class Menu {
             System.out.println("9. Mostra totes les espècias.");
             System.out.println("10. Mostra totes els països.");
             System.out.println("11. Mostra totes els productes.");
-            System.out.println("12. Modificar el nom d'un paìs per id");
-            System.out.println("13. Modificar el format d'un producte per id");
-            System.out.println("14. Eliminar per ID un país");
-            System.out.println("15. Eliminar per ID un format");
+            System.out.println("12. Modificar el nom d'un paìs per id.");
+            System.out.println("13. Modificar el format d'un producte per id.");
+            System.out.println("14. Eliminar per ID un país.");
+            System.out.println("15. Eliminar per ID un format.");
             System.out.println("0. Sortir. ");
 
             System.out.println("Esculli opció: ");

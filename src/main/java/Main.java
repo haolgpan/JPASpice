@@ -186,7 +186,6 @@ public class Main {
                     id = scanner.nextInt();
                     try {
                         spiceController.deleteSpice(id);
-                        System.out.println("Esborrat la espècia amb ID: " + id);
                         spiceController.listSpices();
                         break;
                     }catch (Exception e){
@@ -244,10 +243,10 @@ public class Main {
                     spiceController.listSpices();
                     break;
                 case 10:
-                    countryController.listCountries();
+                    countryController.printCountries(countries);
                     break;
                 case 11:
-                    productController.listProducts();
+                    productController.printProduct(productes);
                     break;
                 case 12:
                     System.out.println("Introdueix Id del país a actualitzar: ");
@@ -269,7 +268,7 @@ public class Main {
                     try {
                         System.out.println("Introdueix el nou format.");
                         name = scanner.nextLine();
-                        productController.updateProduct(id,name);
+                        productController.updateProduct(id_prod,name);
                         countryController.listCountries();
                         break;
                     }catch (Exception e){
@@ -291,11 +290,10 @@ public class Main {
                     id = scanner.nextInt();
                     try {
                         productController.deleteProduct(id);
-                        System.out.println("Esborrat el format amb ID: " + id);
                         productController.listProducts();
                         break;
                     }catch (Exception e){
-                        System.out.println("No existeix el ID seleccionat");
+                        e.printStackTrace();
                     }
                 default:
 //                    System.out.println("No existeix la opció escollida.");

@@ -60,7 +60,7 @@ public class CountryController {
         return countrieslist;
     }
 
-    public void printCountries(ArrayList<Country> countriesList) {
+    public void printCountries(List<Country> countriesList) {
         for (int i = 0; i < countriesList.size(); i++) {
             System.out.println(countriesList.get(i).toString());
         }
@@ -91,7 +91,7 @@ public class CountryController {
         em.close();
     }
 
-    /* Method to UPDATE activity for a country */
+    /* Method to UPDATE name for a country */
     public void updateCountry(Integer countryId, String name) {
         EntityManager em = entityManagerFactory.createEntityManager();
         em.getTransaction().begin();
@@ -116,6 +116,7 @@ public class CountryController {
             em.remove(country);
             em.getTransaction().commit();
             em.close();
+            System.out.println("Esborrat el país amb ID: " + countryId);
         }
         else System.out.println("No existeix ID introduït");
     }
