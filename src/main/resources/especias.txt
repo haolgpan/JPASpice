@@ -1,0 +1,19 @@
+1,227,0,Adobo Seasoning
+2,170,0,Aji Amarillo Chile Powder
+3,170,1,Aji Amarillo Chiles, Dried
+4,170,0,Aji Panca Chile Powder
+5,170,1,Aji Panca Chiles, Dried
+6,170,1,Aji Paprika Chiles, Whole
+7,219,2,Aleppo Pepper, Mediterranean (Crushed)
+8,153,3,Allspice Berries, Whole
+9,153,0,Allspice, Ground
+10,227,4,Almond Extract, Natural
+11,227,4,Amaretto Flavoring, Natural
+12,170,3,Ancho Chile Peppers, Whole
+13,153,0,Ancho Chile Powder
+14,227,4,Anise Extract, Pure
+15,61,5,Anise Seed
+16,170,0,Annatto Powder
+17,170,3,Annatto Seeds
+18,212,0,Arrowroot Powder
+19,45,6,Assam Tea (Kondoli)

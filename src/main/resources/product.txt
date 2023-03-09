@@ -1,0 +1,25 @@
+0,Powder
+1,De-Stemmed
+2,Crushed
+3,Whole
+4,Liquid
+5,Seeds/Berries
+6,Loose Leaf
+7,Null
+8,Granulated
+9,Blend-Crushed
+10,Coarse Cut
+11,Chips
+12,Cross-cut
+13,Sliced
+14,Blend
+15,Flakes
+16,Shredded
+17,Desiccated
+18,Cracked
+19,Minced
+20,Crushed-Seeds/Berries
+21,Whole-Seeds/Berries
+22,Threads
+23,Greek-cut
+24,Diced
