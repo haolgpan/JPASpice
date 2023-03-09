@@ -11,6 +11,12 @@ public class Menu {
         super();
     }
 
+    /**
+     * Menu visual per el menu principal, aquí permet que l'usuari esculli de les diferents opcions que permet realitzar
+     * a la base de dades.
+     * @return
+     */
+
     public int mainMenu() {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -29,6 +35,8 @@ public class Menu {
             System.out.println("9. Mostra totes les espècias.");
             System.out.println("10. Mostra totes els països.");
             System.out.println("11. Mostra totes els productes.");
+            System.out.println("12. Modificar el nom d'un paìs per id");
+            System.out.println("13. Modificar el format d'un producte per id");
             System.out.println("0. Sortir. ");
 
             System.out.println("Esculli opció: ");
@@ -38,8 +46,7 @@ public class Menu {
                 System.out.println("valor no vàlid");
                 e.printStackTrace();
             }
-        } while (option != 0  && option != 1 && option != 2 && option != 3 && option != 4 && option != 5 && option != 6
-                && option != 7 && option != 8 && option != 9 && option != 10 && option != 11);
+        } while (option < 0 && option > 13);
 
         return option;
     }

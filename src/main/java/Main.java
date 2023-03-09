@@ -19,6 +19,7 @@ import javax.persistence.Persistence;
 import java.io.IOException;
 import java.sql.Connection;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -157,20 +158,21 @@ public class Main {
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
+                    break;
                 case 3:
                     try {
                         tableController.addTable();
-                        break;
                     }catch (Exception e){
                         System.out.println("Les taules ja estan creades");
                     }
+                    break;
                 case 4:
                     try {
                         tableController.deleteTable();
-                        break;
                     }catch (Exception e){
                         System.out.println("No hi ha taules per eliminar");
                     }
+                    break;
                 case 5:
                     try {
                         spiceController.infoSpice();
@@ -206,15 +208,19 @@ public class Main {
                     }
                 case 8:
                     spiceController.listSpices();
-                    System.out.println("Introdueix un Id per la nova espècia: ");
-                    id_spice = scanner.nextInt();
-                    scanner.nextLine();
-                    System.out.println("Introdueix el nom de la espècia: ");
-                    name = scanner.nextLine();
-                    countryController.listCountries();
-                    System.out.println("Introdueix id del país: ");
-                    id = scanner.nextInt();
-                    scanner.nextLine();
+                    try {
+                        System.out.println("Introdueix un Id per la nova espècia: ");
+                        id_spice = scanner.nextInt();
+                        scanner.nextLine();
+                        System.out.println("Introdueix el nom de la espècia: ");
+                        name = scanner.nextLine();
+                        countryController.listCountries();
+                        System.out.println("Introdueix id del país: ");
+                        id = scanner.nextInt();
+                        scanner.nextLine();
+                    }catch (InputMismatchException e){
+                        System.out.println("Entrada de dades incorrectes");
+                    }
                     while (id < 0 || id > 224) {
                         System.out.println("No existeix el país seleccionat, torna a introduir un ID país correcte");
                         id = scanner.nextInt();
@@ -242,6 +248,33 @@ public class Main {
                     break;
                 case 11:
                     productController.listProducts();
+                    break;
+                case 12:
+                    System.out.println("Introdueix Id del país a actualitzar: ");
+                    id = scanner.nextInt();
+                    scanner.nextLine();
+                    try {
+                        System.out.println("Introdueix el nou nom.");
+                        name = scanner.nextLine();
+                        countryController.updateCountry(id,name);
+                        countryController.listCountries();
+                        break;
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+                case 13:
+                    System.out.println("Introdueix Id del format a actualitzar: ");
+                    id_prod = scanner.nextInt();
+                    scanner.nextLine();
+                    try {
+                        System.out.println("Introdueix el nou format.");
+                        name = scanner.nextLine();
+                        productController.updateProduct(id,name);
+                        countryController.listCountries();
+                        break;
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
                 default:
 //                    System.out.println("No existeix la opció escollida.");
                     break;

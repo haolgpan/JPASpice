@@ -61,12 +61,16 @@ public class TableController {
         em.getTransaction().begin();
         em.createNativeQuery("DROP TABLE spices; DROP TABLE country; DROP TABLE product;").executeUpdate();
         em.getTransaction().commit();
+        em.close();
     }
     public void deleteContent(){
         EntityManager em = entityManagerFactory.createEntityManager();
         em.getTransaction().begin();
-        em.createNativeQuery("TRUNCATE TABLE spices; TRUNCATE TABLE country; TRUNCATE TABLE product;").executeUpdate();
+        em.createNativeQuery("TRUNCATE TABLE spices CASCADE").executeUpdate();
+        em.createNativeQuery("TRUNCATE TABLE country CASCADE").executeUpdate();
+        em.createNativeQuery("TRUNCATE TABLE product CASCADE").executeUpdate();
         em.getTransaction().commit();
+        em.close();
     }
 
 }

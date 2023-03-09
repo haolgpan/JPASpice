@@ -26,7 +26,18 @@ public class CountryController {
         this.connection = connection;
         this.entityManagerFactory = entityManagerFactory;
     }
+    /**
+     * @param filename Aquest String correspon amb l'arxiu on s'emmagatzemen les
+     *                 dades de les instancies de Country
+     * @throws IOException <dt><b>Preconditions:</b>
+     *                     <dd>
+     *                     filename<>nil </br> llistaCountry == nil
+     *                     <dt><b>Postconditions:</b>
+     *                     <dd>
+     *                     llistaCountry<>nil
+     */
 
+    //Method to READ a Country in a txt format
     public List<Country> readCountryFile(String filename) throws IOException {
         int id;
         String code, country;
@@ -81,13 +92,19 @@ public class CountryController {
     }
 
     /* Method to UPDATE activity for a country */
-    public void updateCountry(Integer countryId) {
+    public void updateCountry(Integer countryId, String name) {
         EntityManager em = entityManagerFactory.createEntityManager();
         em.getTransaction().begin();
         Country country = (Country) em.find(Country.class, countryId);
-        em.merge(country);
-        em.getTransaction().commit();
-        em.close();
+        if (country != null) {
+            country.setName(name);
+            em.merge(country);
+            em.getTransaction().commit();
+            em.close();
+            System.out.println("País amb ID " + countryId + " actualitzat correctament.");
+        } else {
+            System.out.println("País amb ID " + countryId + " no trobat.");
+        }
     }
 
     /* Method to DELETE a country from the records */

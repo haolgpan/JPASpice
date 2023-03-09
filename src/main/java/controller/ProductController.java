@@ -30,15 +30,16 @@ public class ProductController {
 
     /**
      * @param filename Aquest String correspon amb l'arxiu on s'emmagatzemen les
-     *                 dades de les instancies de Revista
+     *                 dades de les instancies de Product
      * @throws IOException <dt><b>Preconditions:</b>
      *                     <dd>
-     *                     filename<>nil </br> llistaRevistes == nil
+     *                     filename<>nil </br> llistaProductes == nil
      *                     <dt><b>Postconditions:</b>
      *                     <dd>
-     *                     llistaRevistes<>nil
+     *                     llistaProductes<>nil
      */
 
+    //Method to READ a Product in a txt format
     public List<Product> readProductFile(String filename) throws IOException {
         int prodcutId;
         String format;
@@ -89,13 +90,19 @@ public class ProductController {
     }
 
     /* Method to UPDATE activity for a Product */
-    public void updateProduct(Integer productId) {
+    public void updateProduct(Integer productId, String format) {
         EntityManager em = entityManagerFactory.createEntityManager();
         em.getTransaction().begin();
         Product product = (Product) em.find(Product.class, productId);
-        em.merge(product);
-        em.getTransaction().commit();
-        em.close();
+        if (product != null) {
+            product.setFormat(format);
+            em.merge(product);
+            em.getTransaction().commit();
+            em.close();
+            System.out.println("Product format amb ID " + productId + " actualitzat correctament.");
+        } else {
+            System.out.println("Product format amb ID " + productId + " no trobat.");
+        }
     }
 
     /* Method to DELETE a Product from the records */

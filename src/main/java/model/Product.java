@@ -16,10 +16,6 @@ public class Product implements Serializable {
     @Column(name = "format", length = 30)
     private String format;
 
-//    @OneToMany(cascade = CascadeType.ALL)
-//    @JoinColumn(name = "id_product", referencedColumnName = "id_product")
-//    private List<Spice> spices = new ArrayList<Spice>();
-
     public Product(int productId, String format) {
         super();
         this.productId = productId;
@@ -62,13 +58,11 @@ public class Product implements Serializable {
 //        this.spices = spices;
 //    }
 
-
     @Override
     public String toString() {
         String result = "Producte [id_producte=" + productId + ",format=" + format  + "]";
 
 //        result += "\n Llista de productes: [ \n";
-//
 //        for (Spice s : spices) {
 //            result += "\t";
 //            result += s.toString();
@@ -76,7 +70,6 @@ public class Product implements Serializable {
 //        }
 //
 //        result += "] \n";
-
         return result;
     }
 

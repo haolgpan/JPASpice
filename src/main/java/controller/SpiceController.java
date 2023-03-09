@@ -37,20 +37,9 @@ public class SpiceController {
 
     /**
      * @param spicesFile Aquest String correspon amb l'arxiu on s'emmagatzemen les
-     *                   dades de les isntancies de Revista
-     * @return ArrayList d'objectes Revista, amb els seus articles i la
-     * informació de l'autor
-     * @throws IOException <dt><b>Preconditions:</b>
-     *                     <dd>
-     *                     filename<>nil </br> llistaRevistes<>nil </br>
-     *                     llistaRevistes.getRevista(i).getArticles()== nil</br>
-     *                     <dt><b>Postconditions:</b>
-     *                     <dd>
-     *                     llistaRevistes.getRevistes()<>nil</br>
-     *                     llistaRevistes.getRevista(i).getArticles()<>nil</br>
-     *                     llistaRevistes.getRevista(i).getArticle(j)<>nil</br>
-     *                     llistaRevistes
-     *                     .getRevista(i).getArticle(j).getAutor()<>nil</br>
+     *                   dades de les isntancies de Especia
+     * @return ArrayList d'objectes Spice, amb els seus països i la
+     * informació de formt de producte.
      */
 //    public List<Product> readProductFile(String spiceFile, String countryFile, String productFile)
 //            throws IOException {
@@ -78,6 +67,7 @@ public class SpiceController {
 //
 //        return productsList;
 //    }
+    //Method to READ a Spice in a txt format
     public List<Spice> readSpicesFile(String spicesFile, String countryFile, String productFile) throws IOException {
         int spiceId, productId, countryId;
         String name;
@@ -132,9 +122,9 @@ public class SpiceController {
             em.merge(spice);
             em.getTransaction().commit();
             em.close();
-            System.out.println("Spice with ID " + spiceId + " updated successfully.");
+            System.out.println("Spice amb ID " + spiceId + " actualitzat correctament.");
         } else {
-            System.out.println("Spice with ID " + spiceId + " not found.");
+            System.out.println("Spice amb ID " + spiceId + " no trobat.");
         }
     }
 
