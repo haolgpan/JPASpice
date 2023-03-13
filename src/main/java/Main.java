@@ -220,7 +220,7 @@ public class Main {
                     }catch (InputMismatchException e){
                         System.out.println("Entrada de dades incorrectes");
                     }
-                    while (id < 0 || id > 224) {
+                    while (id < 0 || id > 244) {
                         System.out.println("No existeix el país seleccionat, torna a introduir un ID país correcte");
                         id = scanner.nextInt();
                         scanner.nextLine();
@@ -235,7 +235,7 @@ public class Main {
                         scanner.nextLine();
                     }
                     try {
-                        spiceController.insertSpice(id_spice,name, countries.get(id), productes.get(id_prod));
+                        spiceController.insertSpice(id_spice,name, countries.get(id - 1), productes.get(id_prod));
                     }catch (Exception e){
                         e.printStackTrace();
                     }
@@ -291,6 +291,44 @@ public class Main {
                     try {
                         productController.deleteProduct(id);
                         productController.listProducts();
+                        break;
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+                case 16:
+                    System.out.println("Introdueix el país que es desitja filtrar.");
+                    name = scanner.nextLine();
+                    try {
+                        spiceController.spiceByCountry(name);
+                        break;
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+                case 17:
+                    System.out.println("Introdueix el format que es desitja filtrar.");
+                    name = scanner.nextLine();
+                    try {
+                        spiceController.spiceByFormat(name);
+                        break;
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+                case 18:
+                    System.out.println("Introdueix el format que desitja borrar de la taula espècias");
+                    name = scanner.nextLine();
+                    try {
+                        spiceController.deleteByCountry(name);
+                        spiceController.listSpices();
+                        break;
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+                case 19:
+                    System.out.println("Introdueix el format que desitja borrar de la taula espècias");
+                    name = scanner.nextLine();
+                    try{
+                        spiceController.deleteByFormat(name);
+                        spiceController.listSpices();
                         break;
                     }catch (Exception e){
                         e.printStackTrace();

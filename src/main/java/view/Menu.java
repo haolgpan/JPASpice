@@ -37,8 +37,13 @@ public class Menu {
             System.out.println("11. Mostra totes els productes.");
             System.out.println("12. Modificar el nom d'un paìs per id.");
             System.out.println("13. Modificar el format d'un producte per id.");
-            System.out.println("14. Eliminar per ID un país.");
-            System.out.println("15. Eliminar per ID un format.");
+            System.out.println("14. Eliminar per id un país.");
+            System.out.println("15. Eliminar per id un format.");
+            System.out.println("16. Filtrar espècias per països.");
+            System.out.println("17. Filtrar espeècias per format.");
+            System.out.println("18. Eliminar espècias per país.");
+            System.out.println("19. Eliminar espècias per format.");
+
             System.out.println("0. Sortir. ");
 
             System.out.println("Esculli opció: ");
@@ -48,7 +53,7 @@ public class Menu {
                 System.out.println("valor no vàlid");
                 e.printStackTrace();
             }
-        } while (option < 0 && option > 15);
+        } while (option < 0 && option > 19);
 
         return option;
     }

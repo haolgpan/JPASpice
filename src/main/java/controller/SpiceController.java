@@ -84,7 +84,7 @@ public class SpiceController {
             countryId = Integer.parseInt(str.nextToken());
             productId = Integer.parseInt(str.nextToken());
             name = str.nextToken();
-            spicesList.add(new Spice(spiceId, name, productList.get(productId), countryList.get(countryId)));
+            spicesList.add(new Spice(spiceId, name, productList.get(productId), countryList.get(countryId - 1)));
         }
         br.close();
         return spicesList;
@@ -128,7 +128,7 @@ public class SpiceController {
         }
     }
 
-    /* Method to DELETE an Article from the records */
+    /* Method to DELETE a Spice from the records */
     public void deleteSpice(Integer spiceId) {
         EntityManager em = entityManagerFactory.createEntityManager();
         em.getTransaction().begin();
@@ -141,7 +141,7 @@ public class SpiceController {
         }
         else System.out.println("No existeix ID introduït");
     }
-
+    /*Method to show all info of a Spice */
     public void infoSpice() {
         EntityManager em = entityManagerFactory.createEntityManager();
         System.out.println("Introdueix un ID de la spice:");
@@ -165,6 +165,7 @@ public class SpiceController {
         if(resultList.isEmpty()) System.out.println("No existeix el ID introduït");
     }
 
+    /* Method to CREATE a Spice into the the table Spice */
     public void insertSpice(int spiceId, String name, Country country, Product product) {
         EntityManager em = entityManagerFactory.createEntityManager();
         em.getTransaction().begin();
@@ -184,6 +185,85 @@ public class SpiceController {
         em.close();
     }
 
+    /* Method to filter a Spice by Country */
+    public void spiceByCountry(String countryName){
+        EntityManager em = entityManagerFactory.createEntityManager();
+        TypedQuery<Spice> query = em.createQuery(
+                "SELECT s FROM Spice s WHERE s.country.name = :name",
+                Spice.class);
+        query.setParameter("name", countryName);
+        List<Spice> spices = query.getResultList();
 
+        if (spices.isEmpty()) {
+            System.out.println("No s'ha trobat espècias del país " + countryName);
+        } else {
+            System.out.println("Espècias del país " + countryName + ":");
+            for (Spice spice : spices) {
+                System.out.println(spice);
+            }
+        }
+        em.close();
+    }
+    /* Method to filter a Spice by Format */
+    public void spiceByFormat(String format){
+        EntityManager em = entityManagerFactory.createEntityManager();
+        TypedQuery<Spice> query = em.createQuery(
+                "SELECT s FROM Spice s WHERE s.product.format = :name",
+                Spice.class);
+        query.setParameter("name", format);
+        List<Spice> spices = query.getResultList();
+
+        if (spices.isEmpty()) {
+            System.out.println("No s'han trobat espècias del format " + format);
+        } else {
+            System.out.println("Espècias de format " + format + ":");
+            for (Spice spice : spices) {
+                System.out.println(spice);
+            }
+        }
+        em.close();
+    }
+    /* Method to DELETE a Spice by Country */
+    public void deleteByCountry(String country){
+        EntityManager em = entityManagerFactory.createEntityManager();
+        em.getTransaction().begin();
+        TypedQuery<Spice> query = em.createQuery(
+                "SELECT s FROM Spice s WHERE s.country.name = :name",
+                Spice.class
+        );
+        query.setParameter("name", country);
+        List<Spice> spices = query.getResultList();
+        if (spices.isEmpty()) {
+            System.out.println("No s'ha trobat espècias del país " + country);
+        } else {
+            for (Spice spice : spices) {
+                em.remove(spice);
+            }
+            em.getTransaction().commit();
+            System.out.println("Espècias del país " + country + " esborrats correctament.");
+        }
+        em.close();
+    }
+    /* Method to DELETE a Spice by Format */
+    public void deleteByFormat(String format){
+        EntityManager em = entityManagerFactory.createEntityManager();
+        em.getTransaction().begin();
+        TypedQuery<Spice> query = em.createQuery(
+                "SELECT s FROM Spice s WHERE s.product.format = :format",
+                Spice.class
+        );
+        query.setParameter("format", format);
+        List<Spice> spices = query.getResultList();
+        if (spices.isEmpty()) {
+            System.out.println("No s'han trobat espècias del format " + format + ".");
+        } else {
+            for (Spice spice : spices) {
+                em.remove(spice);
+            }
+            em.getTransaction().commit();
+            System.out.println("Espècias amb format de producte " + format + " esborrats correctament.");
+        }
+        em.close();
+    }
 
 }
