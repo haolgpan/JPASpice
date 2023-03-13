@@ -54,7 +54,6 @@ public class ProductController {
 
         }
         br.close();
-        System.out.println("m:" + productList);
         return productList;
     }
 

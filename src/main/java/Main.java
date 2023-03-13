@@ -64,7 +64,6 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        ArrayList<Product> products = new ArrayList();
 
         ConnectionFactory connectionFactory = ConnectionFactory.getInstance();
         Connection c = connectionFactory.connect();
